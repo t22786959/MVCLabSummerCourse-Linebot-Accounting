@@ -1,31 +1,24 @@
 # MVCLab-Summer-Course
 
-### This is 2022 MVCLab Summer Vacation Training Courses.
-
-## Course Review
-
-### AWS (Amazon Web Server)
-* **Date: 08/09**
-
-### FastAPI
-* **Date: 08/11**
-* **How to run**
-    * **Step 1: Install Python Packages**
-        * > pip install -r requirements.txt
-    * **Step 2: Run by uvicorn (Localhost)**
-        * > uvicorn main:app --reload
-        * Default host = 127.0.0.1, port = 8000
-    * **Step 3: Test your API using Swagger UI**
-        * http://127.0.0.1:8000/docs
-### LineBot
+### LineBot-Accounting
 * **Date: 08/17**
-* **How to run**
-    * **Step 0: Go to main path**
-        * > cd ./MVCLab-Summer-Course/LineBot
-    * **Step 1: Install Python Packages**
-        * > pip install -r requirements.txt
     * **Start ngrok https server (default port:8787)**
         * > ngrok http 8787
         * > http://127.0.0.1:4040
     * **Step 2: Run main.py by uvicorn (default localhost:8787)**
         * > python main.py
+* **How to run**
+    * **#note [event] [+/-] [money]**
+        * > Add new event
+        * Example: #note 吃飯 - 200
+    * **#report**
+        * > Show all the records
+    * **#delete [event] [+/-] [money]**
+        * > Delete old event
+        * > Event and money need to be identical to the event you added
+        * Example: #delete 吃飯 - 200
+    * **#sum [Time_duration]**
+        * > Calculate the sum of money from now to Time_duration before
+        * > Time_duration must be [number][s/m/h/d]
+        * Example: 1d , 30m , 10h
+    
